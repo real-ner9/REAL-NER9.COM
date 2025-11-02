@@ -6,7 +6,8 @@ const route = useRoute()
 const links = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'AboutItems' },
-  { path: '/game', label: 'Clicker Game' }
+  { path: '/game', label: 'Clicker Game' },
+  { path: '/dik-counter', label: 'DikCounter' }
 ]
 </script>
 

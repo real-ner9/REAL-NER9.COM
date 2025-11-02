@@ -7,27 +7,53 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
+# Dependency directories
+node_modules/
+**/node_modules/
 
-/cypress/videos/
-/cypress/screenshots/
+# Build outputs
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+build/
+**/build/
+.output/
+coverage/
+**/coverage/
+*.tsbuildinfo
+
+# Framework / bundler caches
+.vite/
+**/.vite/
+.vitest/
+**/.vitest/
+.nuxt/
+.turbo/
+.parcel-cache/
+
+# Testing artifacts
+playwright-report/
+**/playwright-report/
+test-results/
+**/test-results/
+cypress/videos/
+**/cypress/videos/
+cypress/screenshots/
+**/cypress/screenshots/
+
+# Environment & local config
+*.local
+.env
+.env.*
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-*.tsbuildinfo
-
-test-results/
-playwright-report/

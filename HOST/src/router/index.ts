@@ -26,6 +26,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/GameView.vue'),
     },
+    {
+      path: '/dik-counter',
+      name: 'dik-counter',
+      component: () => import('../views/AssView.vue'),
+    },
   ],
 })
 

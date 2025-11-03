@@ -13,11 +13,11 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
     federation({
-      name: 'vueShell',
+      name: 'app',
       remotes: {
-        reactApp: 'http://localhost:3001/assets/remoteEntry.js',
+        dikApp: 'http://localhost:3001/assets/remoteEntry.js',
       },
-      shared: ['vue'],
+      shared: ['vue', 'react', 'react-dom'],
     }),
   ],
   resolve: {
@@ -26,10 +26,12 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
+    modulePreload: false,
+    target: "esnext",
+    minify: false,
+    cssCodeSplit: false,
   },
   server: {
     port: 3000,
-    cors: true,
   },
 })
